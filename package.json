@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio website to show my software application projects  ",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.comp.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/David-Mwakajumba/Portfolio.git"
+  },
+  "author": "David Mwakajumba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/David-Mwakajumba/Portfolio/issues"
+  },
+  "homepage": "https://github.com/David-Mwakajumba/Portfolio#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
