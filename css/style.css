@@ -13,3 +13,58 @@ body {
 
 body {
   font-family: "Poppins", sans-serif; }
+
+.heading-primary {
+  color: #091e42;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 3.75rem; }
+
+.heading-secondary {
+  color: #091e42;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 3.25rem; }
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.75rem;
+  font-size: 1.0625rem;
+  border: 1px solid #7f8cff;
+  border-radius: 8px;
+  transition: all 0.2s; }
+
+.btn--white {
+  background-color: #fff;
+  color: #6070ff; }
+  .btn--white:hover {
+    background-color: #6070ff;
+    color: #fff;
+    box-shadow: 0px 8px 16px #4053fc3d; }
+  .btn--white:active, .btn--white:focus {
+    background-color: #2230d2;
+    color: #fff;
+    box-shadow: none; }
+
+.btn--blue {
+  background-color: #4053fc;
+  color: #fff; }
+  .btn--blue:hover {
+    background-color: #fff;
+    color: #4053fc; }
+  .btn--blue:active, .btn--blue:focus {
+    background-color: #2230d2;
+    color: #fff;
+    box-shadow: none; }
+
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  color: #7f8cff;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 1rem; }
+  .btn-text:link:hover, .btn-text:visited:hover {
+    color: #6070ff; }
