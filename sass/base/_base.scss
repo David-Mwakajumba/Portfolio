@@ -8,8 +8,10 @@
 
 html {
   font-size: 100%;
+  // overflow: hidden;
 }
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
