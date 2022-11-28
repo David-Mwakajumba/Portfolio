@@ -1,0 +1,181 @@
+.shape {
+  &__1 {
+    position: absolute;
+    width: 108.67px;
+    height: 19.44px;
+    left: 20px;
+    top: 85px;
+    background: #ebebff;
+    transform: rotate(-46.14deg);
+
+    @include respond(phone) {
+      width: 51.99px;
+      height: 9.3px;
+      left: -13px;
+      top: 28px;
+    }
+  }
+  &__2 {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border-radius: 10rem 10rem 0 0;
+    left: 68px;
+    top: 116px;
+    background: $color-primary;
+    transform: rotate(-156.88deg);
+    @include respond(phone) {
+      width: 38.5px;
+      height: 19.25px;
+      border-radius: 10rem 10rem 0 0;
+      left: 11px;
+      top: 42px;
+    }
+  }
+  &__3 {
+    position: absolute;
+    width: 56.01px;
+    height: 10.02px;
+    left: 693.25px;
+    margin: 0 auto;
+    top: 145px;
+    background: $color-primary;
+    transform: matrix(0.98, -0.21, -0.21, -0.98, 0, 0);
+    @include respond(phone) {
+      width: 26.46px;
+      height: 4.73px;
+      left: 218.18px;
+      top: 25.59px;
+    }
+  }
+  &__4 {
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    left: 712px;
+    top: 155px;
+    background: #ebebff;
+    @include respond(phone) {
+      width: 11px;
+      height: 10px;
+      left: 226.98px;
+      top: 30.81px;
+    }
+  }
+  &__5 {
+    position: absolute;
+    width: 204px;
+    height: 47px;
+    right: 48px;
+    top: 45px;
+    background: #ebebff;
+    transform: rotate(-30deg);
+
+    @include respond(phone) {
+      width: 95.58px;
+      height: 22.02px;
+      right: 8px;
+      top: 33px;
+    }
+  }
+  &__6 {
+    position: absolute;
+    top: 78px;
+    width: 224px;
+    height: 224px;
+    right: -17px;
+    @include respond(phone) {
+      width: 105px;
+      height: 105px;
+      right: -17px;
+      top: 49px;
+    }
+  }
+  &__7 {
+    position: absolute;
+    width: 36.9px;
+    height: 18.45px;
+    border-radius: 10rem 10rem 0 0;
+    left: 230px;
+    bottom: 127px;
+    background: $color-primary;
+    transform: rotate(-176.08deg);
+    @include respond(phone) {
+      width: 24.14px;
+      height: 12.07px;
+      left: 387px;
+      bottom: 191px;
+    }
+  }
+  &__8 {
+    position: absolute;
+    bottom: 90px;
+    left: 216px;
+    @include respond(phone) {
+      width: 41.1px;
+      height: 33.1px;
+      left: 375px;
+      bottom: 159px;
+    }
+  }
+  &__9 {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    border-radius: 50%;
+    right: 554px;
+    bottom: 112px;
+    background: $color-primary;
+    @include respond(phone) {
+      width: 20px;
+      height: 20px;
+      right: 184px;
+      bottom: 67px;
+    }
+  }
+  &__10 {
+    position: absolute;
+    width: 161.41px;
+    height: 28.87px;
+    right: 560px;
+    bottom: 105px;
+    background: #ebebff;
+    transform: rotate(23.34deg);
+
+    @include respond(phone) {
+      width: 68.06px;
+      height: 12.18px;
+      right: 186px;
+      bottom: 65px;
+    }
+  }
+  &__11 {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    right: 191px;
+    bottom: 198px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #ebebff;
+    @include respond(phone) {
+      width: 15px;
+      height: 15px;
+      left: 69px;
+      bottom: 70px;
+    }
+  }
+  &__12 {
+    @include respond(phone) {
+      position: absolute;
+      background: #ffffff;
+      border: 1px solid #cbcdff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      right: 162px;
+      top: -11px;
+    }
+  }
+}

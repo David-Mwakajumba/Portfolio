@@ -8,6 +8,10 @@ body {
   font-weight: 700;
   font-size: 3rem;
   line-height: 3.75rem;
+
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-secondary {
@@ -16,4 +20,12 @@ body {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.25rem;
+}
+
+.paragraphy {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: $color-text;
 }

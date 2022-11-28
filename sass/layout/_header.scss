@@ -1,0 +1,38 @@
+header {
+  position: relative;
+  background-color: #d6e4e5;
+}
+.header {
+  background-color: $color-white;
+  //   height: 90vh;
+  border-radius: 0 0 0 6.25rem;
+  @include respond(phone) {
+    border-radius: 0 0 0 5.25rem;
+  }
+
+  &__content {
+    padding: 15% 17% 15% 17%;
+    @include respond(phone) {
+      padding: 20% 7% 30% 7%;
+    }
+  }
+  &__p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color-text;
+    @include respond(phone) {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: justify;
+    }
+  }
+
+  .btn-text {
+    margin-bottom: 1.4rem;
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+}

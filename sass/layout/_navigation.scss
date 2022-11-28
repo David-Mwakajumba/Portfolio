@@ -61,6 +61,10 @@
 
     &-link:hover {
       color: $color-primary;
+      @include respond(phone) {
+        color: $color-white;
+        z-index: 9999;
+      }
     }
 
     @include respond(phone) {
@@ -81,6 +85,9 @@
       opacity: 0;
       pointer-events: none;
       visibility: hidden;
+      z-index: 888;
+      // mix-blend-mode: multiply;
+      // backdrop-filter: blur(10px);
     }
   }
 
