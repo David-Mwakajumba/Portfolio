@@ -1,6 +1,6 @@
 header {
   position: relative;
-  background-color: #d6e4e5;
+  background-color: #eff5f5;
 }
 .header {
   background-color: $color-white;
@@ -11,7 +11,13 @@ header {
   }
 
   &__content {
-    padding: 15% 17% 15% 17%;
+    max-width: 920px;
+    // padding: 15% 17% 15% 17%;
+    padding: 10rem 0rem;
+    margin: 0 auto;
+    @include respond(tab-land) {
+      padding: 15% 10% 15% 10%;
+    }
     @include respond(phone) {
       padding: 20% 7% 30% 7%;
     }

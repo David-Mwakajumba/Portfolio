@@ -1,0 +1,99 @@
+.card {
+  background-color: $color-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1156px;
+  gap: 22px;
+  padding: 24px;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 1px solid #dfe1e6;
+  &:not(:last-child) {
+    margin-bottom: 10%;
+
+    @include respond(phone) {
+      padding: 16px;
+      gap: 12px;
+      margin-bottom: 25%;
+    }
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    // @include respond(tab-land-big) {
+    //   flex-direction: column;
+    // }
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    // background-image: url(../../img/portfolio-1.jpg);
+
+    flex: 0 50%;
+    background-size: cover;
+    &-portfolio {
+      max-width: 100%;
+      //   height: auto;
+    }
+  }
+
+  &__content {
+    flex: 0 50%;
+    align-self: flex-start;
+    padding: 24px;
+    @include respond(phone) {
+      padding: 12px 0;
+    }
+
+    &-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      &--dark {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #344563;
+
+        @include respond(phone) {
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+      &--dot {
+        background: #c1c7d0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+      }
+      &--light {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #6b778c;
+        @include respond(phone) {
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    &-skills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    &-skill {
+      padding: 4px 12px;
+      background: #ebebff;
+      border-radius: 8px;
+      color: $color-primary;
+    }
+  }
+}

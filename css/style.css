@@ -32,6 +32,10 @@ body {
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 3.25rem; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 2rem;
+      line-height: 2.75rem; } }
 
 .paragraphy {
   font-style: normal;
@@ -40,17 +44,39 @@ body {
   line-height: 28px;
   color: #344563; }
 
+.paragraph-secondary {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563; }
+  @media (max-width: 37.5em) {
+    .paragraph-secondary {
+      font-size: 15px; } }
+
 .u-margin-bottom-small {
   margin-bottom: 1.5rem !important; }
   @media (max-width: 37.5em) {
     .u-margin-bottom-small {
       margin-bottom: 0.75rem !important; } }
 
+.u-margin-bottom-12 {
+  margin-bottom: 0.72rem; }
+
+.u-margin-bottom-40 {
+  margin-bottom: 2.5rem; }
+  @media (max-width: 37.5em) {
+    .u-margin-bottom-40 {
+      margin-bottom: 1.5rem; } }
+
 .u-margin-bottom-medium {
   margin-bottom: 1.7rem !important; }
   @media (max-width: 37.5em) {
     .u-margin-bottom-medium {
       margin-bottom: 1rem !important; } }
+
+.reverse-card {
+  flex-direction: row-reverse; }
 
 .btn, .btn:link, .btn:visited {
   display: inline-block;
@@ -92,6 +118,82 @@ body {
   font-size: 1rem; }
   .btn-text:link:hover, .btn-text:visited:hover {
     color: #6070ff; }
+
+.card {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1156px;
+  gap: 22px;
+  padding: 24px;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 1px solid #dfe1e6; }
+  .card:not(:last-child) {
+    margin-bottom: 10%; }
+    @media (max-width: 37.5em) {
+      .card:not(:last-child) {
+        padding: 16px;
+        gap: 12px;
+        margin-bottom: 25%; } }
+  .card__body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; }
+    @media (max-width: 56.25em) {
+      .card__body {
+        flex-direction: column; } }
+  .card__image {
+    flex: 0 50%;
+    background-size: cover; }
+    .card__image-portfolio {
+      max-width: 100%; }
+  .card__content {
+    flex: 0 50%;
+    align-self: flex-start;
+    padding: 24px; }
+    @media (max-width: 37.5em) {
+      .card__content {
+        padding: 12px 0; } }
+    .card__content-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px; }
+      .card__content-heading--dark {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #344563; }
+        @media (max-width: 37.5em) {
+          .card__content-heading--dark {
+            font-size: 13px;
+            line-height: 16px; } }
+      .card__content-heading--dot {
+        background: #c1c7d0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%; }
+      .card__content-heading--light {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: #6b778c; }
+        @media (max-width: 37.5em) {
+          .card__content-heading--light {
+            font-size: 13px;
+            line-height: 16px; } }
+    .card__content-skills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap; }
+    .card__content-skill {
+      padding: 4px 12px;
+      background: #ebebff;
+      border-radius: 8px;
+      color: #6070ff; }
 
 .social__item {
   display: flex;
@@ -281,6 +383,8 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 1.6rem 10%; }
   @media (max-width: 56.25em) {
     .navigation {
@@ -381,7 +485,7 @@ body {
 
 header {
   position: relative;
-  background-color: #d6e4e5; }
+  background-color: #eff5f5; }
 
 .header {
   background-color: #fff;
@@ -390,7 +494,12 @@ header {
     .header {
       border-radius: 0 0 0 5.25rem; } }
   .header__content {
-    padding: 15% 17% 15% 17%; }
+    max-width: 920px;
+    padding: 10rem 0rem;
+    margin: 0 auto; }
+    @media (max-width: 75em) {
+      .header__content {
+        padding: 15% 10% 15% 10%; } }
     @media (max-width: 37.5em) {
       .header__content {
         padding: 20% 7% 30% 7%; } }
@@ -410,3 +519,13 @@ header {
     @media (max-width: 37.5em) {
       .header .btn-text {
         margin-bottom: 1rem; } }
+
+.contaner {
+  margin: 0 auto; }
+
+.section-portfolio {
+  background-color: #eff5f5;
+  padding: 9%; }
+  @media (max-width: 37.5em) {
+    .section-portfolio {
+      padding: 20% 6% 6% 6%; } }
