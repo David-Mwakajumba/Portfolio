@@ -6,6 +6,10 @@
   }
 }
 
+.u-margin-bottom-8 {
+  margin-bottom: 0.5rem;
+}
+
 .u-margin-bottom-12 {
   margin-bottom: 0.72rem;
 }
@@ -13,6 +17,12 @@
   margin-bottom: 2.5rem;
   @include respond(phone) {
     margin-bottom: 1.5rem;
+  }
+}
+.u-margin-bottom-59 {
+  margin-bottom: 3.68rem;
+  @include respond(phone) {
+    margin-bottom: 12px;
   }
 }
 

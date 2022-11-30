@@ -1,0 +1,138 @@
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #c1c7d0;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  @supports (-webkit-backdrop-filter: blur(10px)) or
+    (backdrop-filter: blur(10px)) {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+
+    overflow-y: auto;
+  }
+
+  &__content {
+    padding: 24px;
+    position: relative;
+    // @include absCenter;
+    margin: 5rem auto;
+
+    width: 80%;
+    background-color: $color-white;
+    box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+
+    // transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transform: scale(0.25);
+    transition: all 0.5s 0.2s;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    .card__content-heading--dark {
+      font-size: 15px;
+    }
+  }
+
+  &__body {
+    &-img {
+      //   display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: fill;
+    }
+    &-content {
+      display: flex;
+      gap: 24px;
+
+      @include respond(tab-land) {
+        flex-direction: column;
+      }
+    }
+    &-text {
+      flex: 0 70%;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 30px;
+      color: #344563;
+
+      @include respond(phone) {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+    &-skills {
+      .btn-group {
+        display: flex;
+        gap: 12px;
+        .btn--white {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          span {
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon {
+              //   filter: invert(10);
+              z-index: 666;
+            }
+          }
+        }
+      }
+      .btn--white:hover {
+        .icon {
+          filter: invert(10);
+          z-index: 666;
+        }
+      }
+    }
+  }
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__content {
+    // transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:visited {
+      //   color: $color-grey-dark;
+      //   color: black;
+      //   position: absolute;
+      //   top: 2.5rem;
+      //   right: 2.5rem;
+      //   font-size: 3rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all.2s;
+      align-self: flex-start;
+      margin-top: 5px;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
