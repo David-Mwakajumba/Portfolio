@@ -2,6 +2,20 @@
   background-color: #eff5f5;
   padding: 9%;
   @include respond(phone) {
-    padding: 20% 6% 6% 6%;
+    padding: 20% 6%;
+  }
+}
+.section-about {
+  background-color: #eff5f5;
+}
+
+.section-contact {
+  background-color: $color-primary;
+  border-radius: 6.25rem 0 0 0;
+  padding: 10% 10%;
+
+  @include respond(phone) {
+    padding: 102px 10%;
+    border-radius: 5.25rem 0 0 0;
   }
 }

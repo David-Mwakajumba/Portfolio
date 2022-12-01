@@ -1,0 +1,112 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $color-primary;
+  @include respond(phone) {
+    padding: 0 24px;
+  }
+
+  &__paragraph {
+    max-width: 569px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #ebebff;
+  }
+
+  &__form {
+    // width: 80%;
+    width: 447px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+    @include respond(phone) {
+      width: 125%;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 20px;
+      color: #172b4d;
+    }
+
+    input:not(:last-child) {
+      margin-bottom: 1.7rem;
+    }
+
+    &--name {
+      padding: 15px 16px;
+      outline: none;
+      &::placeholder {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #b3bac5;
+      }
+    }
+    &--text {
+      padding: 15px 16px;
+      outline: none;
+
+      &::placeholder {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #b3bac5;
+      }
+    }
+    &--area {
+      margin-bottom: 1.7rem;
+      outline: none;
+      padding: 15px 16px;
+
+      &::placeholder {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 24px;
+        color: #b3bac5;
+      }
+    }
+    &--btn {
+      outline: none;
+      align-self: center;
+      border: none;
+      background-color: $color-white;
+      color: $color-primary;
+      text-decoration: none;
+
+      @include respond(phone) {
+        align-self: flex-start;
+      }
+      &:hover {
+        outline: 2px solid $color-primary-light;
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0px 8px 16px #4053fc3d;
+      }
+      &:active,
+      &:focus {
+        background-color: $color-primary-dark-hover;
+        color: $color-white;
+        box-shadow: none;
+      }
+    }
+  }
+}

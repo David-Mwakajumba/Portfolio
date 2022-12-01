@@ -1,0 +1,111 @@
+.about-content {
+  display: flex;
+  gap: 25px;
+  padding: 9%;
+  background-color: $color-white;
+  border-radius: 0 6.25rem 0 0;
+  @include respond(tab-land) {
+    flex-direction: column;
+    border-radius: 0 5.25rem 0 0;
+  }
+  @include respond(phone) {
+    border-radius: 0 5.25rem 0 0;
+  }
+  &__text {
+    flex: 0 40%;
+    &--paragraph {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #344563;
+    }
+  }
+  &__accordion {
+    flex: 0 60%;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+      &:checked + .tab-label::after {
+        transform: rotate(90deg);
+      }
+      &:checked ~ .tab-content {
+        max-height: 100vh;
+        padding: 1em;
+      }
+    }
+
+    .tabs {
+      overflow: hidden;
+    }
+
+    .tab {
+      width: 100%;
+      color: #344563;
+      overflow: hidden;
+      border-bottom: solid 1px #dfe1e6;
+
+      &-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        background: #ffff;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+          background: #f4f4f4;
+        }
+
+        &::after {
+          content: url(../../img/icon/forwad.svg);
+          width: 1em;
+          height: 1em;
+          text-align: center;
+          transition: all 0.35s;
+          color: #acb7c3;
+        }
+      }
+
+      &-content {
+        display: flex;
+        max-height: 0;
+        padding: 0 1em;
+        background: white;
+        transition: all 0.35s;
+      }
+
+      &-close {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1em;
+        font-size: 0.75em;
+        cursor: pointer;
+      }
+    }
+
+    .skills {
+      width: 122px;
+      height: 120px;
+      padding: 12px;
+      background: #f7f7f9;
+      border-radius: 8px;
+      margin-right: 12px;
+
+      p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        color: #253858;
+      }
+
+      img {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
