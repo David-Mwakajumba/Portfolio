@@ -7,12 +7,23 @@
 }
 .section-about {
   background-color: #eff5f5;
+
+  .container-about {
+    padding: 0 9%;
+    background-color: $color-white;
+    border-radius: 0 6.25rem 0 0;
+  }
 }
 
 .section-contact {
   background-color: $color-primary;
   border-radius: 6.25rem 0 0 0;
   padding: 10% 10%;
+  border-bottom: none;
+  @include respond(big-desktop) {
+    padding: 5% 10%;
+    border-radius: 5.25rem 0 0 0;
+  }
 
   @include respond(phone) {
     padding: 102px 10%;

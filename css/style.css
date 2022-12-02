@@ -7,7 +7,8 @@
 
 html {
   font-size: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 body {
   box-sizing: border-box;
@@ -93,6 +94,9 @@ body {
 .reverse-card {
   flex-direction: row-reverse; }
 
+.color-white {
+  color: #fff; }
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -163,9 +167,16 @@ body {
   .card__image {
     flex: 0 50%;
     background-size: cover;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: all 0.5s;
+    overflow: hidden;
+    border-radius: 8px; }
     .card__image-portfolio {
-      max-width: 100%; }
+      max-width: 100%;
+      height: 100%;
+      transition: all 0.5s; }
+      .card__image-portfolio:hover {
+        transform: scale(1.2); }
   .card__content {
     flex: 0 50%;
     align-self: flex-start;
@@ -481,7 +492,6 @@ body {
     top: -11px; } }
 
 .navigation {
-  position: relative;
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -490,9 +500,20 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1.6rem 10%; }
+  .navigation a {
+    display: inline-block;
+    text-decoration: none;
+    color: #6070ff; }
+  @media (min-width: 112.5em) {
+    .navigation {
+      max-width: 1440px;
+      padding: 1.6rem 5%; } }
   @media (max-width: 56.25em) {
     .navigation {
       padding: 1.6rem 5%; } }
+  @media (max-width: 37.5em) {
+    .navigation {
+      height: 60px; } }
   .navigation__logo {
     display: flex;
     align-items: center;
@@ -537,7 +558,8 @@ body {
         z-index: 9999; } }
   @media (max-width: 37.5em) {
     .navigation__main {
-      background-color: #6070ff;
+      background-color: rgba(96, 112, 255, 0.8);
+      backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
       flex-direction: column;
@@ -587,6 +609,22 @@ body {
   .navigation-open .navigation__icon[name="menu-outline"] {
     display: none; } }
 
+.sticky .navigation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 899;
+  padding: 0 9%;
+  box-shadow: 0px 0px 16px rgba(64, 83, 252, 0.24); }
+  @media (min-width: 112.5em) {
+    .sticky .navigation {
+      margin: 0 560px 0 560px; } }
+  @media (max-width: 37.5em) {
+    .sticky .navigation {
+      padding: 0 6%; } }
+
 header {
   position: relative;
   background-color: #eff5f5; }
@@ -624,22 +662,27 @@ header {
       .header .btn-text {
         margin-bottom: 1rem; } }
 
+.sticky .header-observe {
+  margin-top: 72px; }
+
 .contaner {
   margin: 0 auto; }
 
 .about-content {
   display: flex;
   gap: 25px;
-  padding: 9%;
+  padding: 142px 0;
   background-color: #fff;
-  border-radius: 0 6.25rem 0 0; }
+  max-width: 1156px;
+  margin: 0 auto; }
   @media (max-width: 75em) {
     .about-content {
       flex-direction: column;
       border-radius: 0 5.25rem 0 0; } }
   @media (max-width: 37.5em) {
     .about-content {
-      border-radius: 0 5.25rem 0 0; } }
+      border-radius: 0 5.25rem 0 0;
+      padding: 114px 0; } }
   .about-content__text {
     flex: 0 40%; }
     .about-content__text--paragraph {
@@ -690,6 +733,11 @@ header {
         padding: 0 1em;
         background: white;
         transition: all 0.35s; }
+        @media (max-width: 37.5em) {
+          .about-content__accordion .tab-content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; } }
       .about-content__accordion .tab-close {
         display: flex;
         justify-content: flex-end;
@@ -703,6 +751,16 @@ header {
       background: #f7f7f9;
       border-radius: 8px;
       margin-right: 12px; }
+      .about-content__accordion .skills-icon {
+        display: block; }
+      @media (max-width: 37.5em) {
+        .about-content__accordion .skills {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 16px;
+          width: 303px;
+          height: 66.72px; } }
       .about-content__accordion .skills p {
         font-style: normal;
         font-weight: 500;
@@ -710,6 +768,9 @@ header {
         color: #253858; }
       .about-content__accordion .skills img {
         margin-bottom: 16px; }
+        @media (max-width: 37.5em) {
+          .about-content__accordion .skills img {
+            margin-bottom: 0; } }
 
 .contact {
   display: flex;
@@ -749,7 +810,9 @@ header {
       margin-bottom: 1.7rem; }
     .contact__form--name {
       padding: 15px 16px;
-      outline: none; }
+      outline: none;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px; }
       .contact__form--name::placeholder {
         font-family: "Poppins";
         font-style: normal;
@@ -759,7 +822,9 @@ header {
         color: #b3bac5; }
     .contact__form--text {
       padding: 15px 16px;
-      outline: none; }
+      outline: none;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px; }
       .contact__form--text::placeholder {
         font-family: "Poppins";
         font-style: normal;
@@ -770,7 +835,9 @@ header {
     .contact__form--area {
       margin-bottom: 1.7rem;
       outline: none;
-      padding: 15px 16px; }
+      padding: 15px 16px;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px; }
       .contact__form--area::placeholder {
         font-family: "Poppins";
         font-style: normal;
@@ -798,6 +865,27 @@ header {
         color: #fff;
         box-shadow: none; }
 
+.footer {
+  background-color: #6070ff;
+  padding: 2rem 0 5rem 0rem;
+  border-top: none; }
+  .footer__content {
+    max-width: 920px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .footer__content .navigation__logot-text {
+      color: #fff; }
+    .footer__content .navigation__main-link {
+      color: #fff; }
+  .footer__copyright {
+    color: #fff;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px; }
+
 .section-portfolio {
   background-color: #eff5f5;
   padding: 9%; }
@@ -807,11 +895,20 @@ header {
 
 .section-about {
   background-color: #eff5f5; }
+  .section-about .container-about {
+    padding: 0 9%;
+    background-color: #fff;
+    border-radius: 0 6.25rem 0 0; }
 
 .section-contact {
   background-color: #6070ff;
   border-radius: 6.25rem 0 0 0;
-  padding: 10% 10%; }
+  padding: 10% 10%;
+  border-bottom: none; }
+  @media (min-width: 112.5em) {
+    .section-contact {
+      padding: 5% 10%;
+      border-radius: 5.25rem 0 0 0; } }
   @media (max-width: 37.5em) {
     .section-contact {
       padding: 102px 10%;

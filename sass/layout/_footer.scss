@@ -1,0 +1,30 @@
+.footer {
+  //   background-color: #2b384c;
+  background-color: $color-primary;
+  padding: 2rem 0 5rem 0rem;
+  border-top: none;
+  &__content {
+    max-width: 920px;
+    // padding: 15% 17% 15% 17%;
+    // padding: 10rem 0rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .navigation__logot-text {
+      color: $color-white;
+    }
+    .navigation__main-link {
+      color: $color-white;
+    }
+  }
+
+  &__copyright {
+    color: $color-white;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

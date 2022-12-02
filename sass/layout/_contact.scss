@@ -48,6 +48,9 @@
     &--name {
       padding: 15px 16px;
       outline: none;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px;
+
       &::placeholder {
         font-family: "Poppins";
         font-style: normal;
@@ -60,6 +63,8 @@
     &--text {
       padding: 15px 16px;
       outline: none;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px;
 
       &::placeholder {
         font-family: "Poppins";
@@ -74,6 +79,8 @@
       margin-bottom: 1.7rem;
       outline: none;
       padding: 15px 16px;
+      border: 1px solid #cfd8dc;
+      border-radius: 8px;
 
       &::placeholder {
         font-family: "Poppins";

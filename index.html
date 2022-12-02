@@ -21,39 +21,50 @@
   </head>
   <body>
     <!-- NAVIGATION -->
+    <div class="container-nav">
+      <div class="navigation">
+        <a href="#">
+          <div class="navigation__logo">
+            <img
+              src="img/icon/logo.png"
+              alt="logo"
+              class="navigation__logo-img"
+            />
+            <h1 class="navigation__logo-text">David</h1>
+          </div>
+        </a>
 
-    <div class="navigation">
-      <div class="navigation__logo">
-        <img src="img/icon/logo.png" alt="logo" class="navigation__logo-img" />
-        <h1 class="navigation__logo-text">David</h1>
+        <div class="navigation__main">
+          <ul class="navigation__main-list">
+            <li>
+              <a href="#portfolio" class="navigation__main-link">Portfolio</a>
+            </li>
+            <li><a href="#about" class="navigation__main-link">About</a></li>
+            <li>
+              <a href="#contact" class="navigation__main-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <button class="navigation__mobile-nav">
+          <img
+            class="navigation__icon"
+            src="img/icon/nav-menu.svg"
+            alt="Menu icon"
+            name="menu-outline"
+          />
+          <img
+            class="navigation__icon"
+            src="img/icon/nav-cancel.svg"
+            alt="Cancel icon"
+            name="close-outline"
+          />
+        </button>
       </div>
-
-      <div class="navigation__main">
-        <ul class="navigation__main-list">
-          <li><a href="" class="navigation__main-link">Portfolio</a></li>
-          <li><a href="" class="navigation__main-link">About</a></li>
-          <li><a href="" class="navigation__main-link">Contact</a></li>
-        </ul>
-      </div>
-
-      <button class="navigation__mobile-nav">
-        <img
-          class="navigation__icon"
-          src="img/icon/nav-menu.svg"
-          alt="Menu icon"
-          name="menu-outline"
-        />
-        <img
-          class="navigation__icon"
-          src="img/icon/nav-cancel.svg"
-          alt="Cancel icon"
-          name="close-outline"
-        />
-      </button>
     </div>
 
     <!-- HEADER  -->
-    <header>
+    <header id="home" class="header-observe">
       <div class="shape">
         <div class="shape__1"></div>
         <div class="shape__2"></div>
@@ -121,14 +132,14 @@
 
     <main>
       <!-- MODAL -->
-      <section class="section-portfolio">
+      <section class="section-portfolio" id="portfolio">
         <div class="card">
           <div class="card__body">
             <div class="card__image">
               <a href="#popup-1">
                 <img
                   class="card__image-portfolio"
-                  src="img/portfolio-1.jpg"
+                  src="img/portfolio-1.png"
                   alt="Portfolio 1"
                 />
               </a>
@@ -177,7 +188,7 @@
               <div class="popup__body">
                 <img
                   class="popup__body-img u-margin-bottom-59"
-                  src="img/Portfolio-m1.jpg"
+                  src="img/portfolio-1.png"
                   alt="Portfolio"
                 />
                 <div class="popup__body-content">
@@ -235,7 +246,7 @@
               <a href="#popup-2">
                 <img
                   class="card__image-portfolio"
-                  src="img/portfolio-2.jpg"
+                  src="img/portfolio-2.png"
                   alt="Portfolio 2"
                 />
               </a>
@@ -292,7 +303,7 @@
               <div class="popup__body">
                 <img
                   class="popup__body-img u-margin-bottom-59"
-                  src="img/Portfolio-2.jpg"
+                  src="img/portfolio-2.png"
                   alt="Portfolio"
                 />
                 <div class="popup__body-content">
@@ -350,7 +361,7 @@
               <a href="#popup-3">
                 <img
                   class="card__image-portfolio"
-                  src="img/portfolio-3.jpg"
+                  src="img/portfolio-3.png"
                   alt="Portfolio 3"
                 />
               </a>
@@ -403,7 +414,7 @@
               <div class="popup__body">
                 <img
                   class="popup__body-img u-margin-bottom-59"
-                  src="img/portfolio-3.jpg"
+                  src="img/portfolio-3.png"
                   alt="Portfolio"
                 />
                 <div class="popup__body-content">
@@ -461,7 +472,7 @@
               <a href="#popup-4">
                 <img
                   class="card__image-portfolio"
-                  src="img/portfolio-4.jpg"
+                  src="img/portfolio-4.png"
                   alt="Portfolio 4"
                 />
               </a>
@@ -518,7 +529,7 @@
                 <div class="popup__image">
                   <img
                     class="popup__body-img u-margin-bottom-59"
-                    src="img/portfolio-4.jpg"
+                    src="img/portfolio-4.png"
                     alt="Portfolio"
                   />
                 </div>
@@ -574,91 +585,105 @@
       </section>
 
       <!-- ABOUT SECTION -->
-      <section class="section-about">
-        <div class="about-content">
-          <div class="about-content__text">
-            <h2 class="heading-secondary u-margin-bottom-8">
-              About <br />
-              Myself
-            </h2>
-            <p class="about-content__text--paragraph u-margin-bottom-12">
-              Hello I’m a software developer! I can help you build a product ,
-              feature or website Look through some of my work and experience! If
-              you like what you see and have a project you need coded, don’t
-              hestiate to contact me.
-            </p>
-            <a href="#" class="btn-text u-margin-bottom-16">LET’S CONNECT</a>
-            <div class="social u-margin-bottom-small">
-              <ul class="social__item">
-                <li class="social__item--list">
-                  <a class="social__item--link" href="#"
-                    ><img src="img/icon/twitter.svg" alt=""
-                  /></a>
-                </li>
+      <section class="section-about" id="about">
+        <div class="container-about">
+          <div class="about-content">
+            <div class="about-content__text">
+              <h2 class="heading-secondary u-margin-bottom-8">
+                About <br />
+                Myself
+              </h2>
+              <p class="about-content__text--paragraph u-margin-bottom-12">
+                Hello I’m a software developer! I can help you build a product ,
+                feature or website Look through some of my work and experience!
+                If you like what you see and have a project you need coded,
+                don’t hestiate to contact me.
+              </p>
+              <a href="#" class="btn-text u-margin-bottom-16">LET’S CONNECT</a>
+              <div class="social u-margin-bottom-small">
+                <ul class="social__item">
+                  <li class="social__item--list">
+                    <a class="social__item--link" href="#"
+                      ><img src="img/icon/twitter.svg" alt=""
+                    /></a>
+                  </li>
 
-                <li class="social__item--list">
-                  <a class="social__item--link" href="#"
-                    ><img src="img/icon/linkedin.svg" alt=""
-                  /></a>
-                </li>
+                  <li class="social__item--list">
+                    <a class="social__item--link" href="#"
+                      ><img src="img/icon/linkedin.svg" alt=""
+                    /></a>
+                  </li>
 
-                <li class="social__item--list">
-                  <a class="social__item--link" href="#"
-                    ><img src="img/icon/medium.svg" alt=""
-                  /></a>
-                </li>
+                  <li class="social__item--list">
+                    <a class="social__item--link" href="#"
+                      ><img src="img/icon/medium.svg" alt=""
+                    /></a>
+                  </li>
 
-                <li class="social__item--list">
-                  <a class="social__item--link" href="#"
-                    ><img src="img/icon/github-grey.svg" alt=""
-                  /></a>
-                </li>
+                  <li class="social__item--list">
+                    <a class="social__item--link" href="#"
+                      ><img src="img/icon/github-grey.svg" alt=""
+                    /></a>
+                  </li>
 
-                <li class="social__item--list">
-                  <a class="social__item--link" href="#"
-                    ><img src="img/icon/angellist.svg" alt=""
-                  /></a>
-                </li>
-              </ul>
+                  <li class="social__item--list">
+                    <a class="social__item--link" href="#"
+                      ><img src="img/icon/angellist.svg" alt=""
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="btn btn--white">See Project</a>
             </div>
-            <a href="#" class="btn btn--white">See Project</a>
-          </div>
 
-          <div class="about-content__accordion">
-            <div class="accordion">
-              <div class="tabs">
-                <div class="tab">
-                  <input type="checkbox" id="chck1" />
-                  <label class="tab-label" for="chck1">Languages</label>
-                  <div class="tab-content">
-                    <div class="skills">
-                      <img src="img/icon/javascript.svg" alt="" />
-                      <p>JavaScript</p>
-                    </div>
-                    <div class="skills">
-                      <img src="img/icon/html.svg" alt="" />
-                      <p>HTML</p>
-                    </div>
-                    <div class="skills">
-                      <img src="img/icon/css.svg" alt="" />
-                      <p>Css</p>
+            <div class="about-content__accordion">
+              <div class="accordion">
+                <div class="tabs">
+                  <div class="tab">
+                    <input type="checkbox" id="chck1" />
+                    <label class="tab-label" for="chck1">Languages</label>
+                    <div class="tab-content">
+                      <div class="skills">
+                        <img
+                          class="skills-icon"
+                          src="img/icon/javascript.svg"
+                          alt="Javascript icon"
+                        />
+                        <p>JavaScript</p>
+                      </div>
+                      <div class="skills">
+                        <img
+                          class="skills-icon"
+                          src="img/icon/html.svg"
+                          alt="html icon"
+                        />
+                        <p>HTML</p>
+                      </div>
+                      <div class="skills">
+                        <img
+                          class="skills-icon"
+                          src="img/icon/css.svg"
+                          alt="css icon"
+                        />
+                        <p>Css</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="chck2" />
-                  <label class="tab-label" for="chck2">Frameworks</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A,
-                    in!
+                  <div class="tab">
+                    <input type="checkbox" id="chck2" />
+                    <label class="tab-label" for="chck2">Frameworks</label>
+                    <div class="tab-content">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      A, in!
+                    </div>
                   </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="chck1" />
-                  <label class="tab-label" for="chck1">Skills</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Ipsum, reiciendis!
+                  <div class="tab">
+                    <input type="checkbox" id="chck1" />
+                    <label class="tab-label" for="chck1">Skills</label>
+                    <div class="tab-content">
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                      Ipsum, reiciendis!
+                    </div>
                   </div>
                 </div>
               </div>
@@ -668,7 +693,7 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="section-contact">
+      <section class="section-contact" id="contact">
         <div class="contact">
           <h2 class="heading-secondary heading-white u-margin-bottom-8">
             Contact me
@@ -705,6 +730,35 @@
       </section>
     </main>
 
+    <footer class="footer" id="">
+      <div class="footer__content">
+        <!-- <div class="navigation__logo">
+          <img
+            src="img/icon/logo.png"
+            alt="logo"
+            class="navigation__logo-img"
+          />
+          <h1 class="navigation__logo-text color-white">David</h1>
+        </div>
+
+        <div class="navigation__main">
+          <ul class="navigation__main-list">
+            <li><a href="" class="navigation__main-link">Portfolio</a></li>
+            <li><a href="" class="navigation__main-link">About</a></li>
+            <li><a href="" class="navigation__main-link">Contact</a></li>
+          </ul>
+        </div> -->
+
+        <p class="footer__copyright">
+          Copyright &copy; <span class="year">2027</span> David.
+        </p>
+      </div>
+    </footer>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script src="index.js"></script>
   </body>
 </html>
